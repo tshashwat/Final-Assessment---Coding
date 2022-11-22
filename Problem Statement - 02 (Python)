@@ -1,0 +1,22 @@
+#nth number in fibonacci series
+
+def nth_fib(n):
+    a=0
+    b=1
+    c=0
+    num=0
+    if n==0:
+        return("incorrect input")
+    if n==1:
+        return 0
+    if n==2:
+        return 1
+    while(num!=n-2):
+        c=a+b
+        a=b
+        b=c
+        num+=1
+    return(c)
+
+n=int(input("enter the value of n number for fibonnaci series : "))
+print("nth value of fibonacci series is : ",nth_fib(n))
